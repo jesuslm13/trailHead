@@ -1,0 +1,19 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 05-14-2021
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+  Modifications Log 
+  Ver   Date         Author                               Modification
+  1.0   05-14-2021   ChangeMeIn@UserSettingsUnder.SFDoc   Initial Version
+-->
+<apex:page standardController="Contact">
+  <apex:pageBlock >
+    <apex:pageBlockSection >
+      First Name: {! contact.FirstName }<br/>
+      Last Name: {! Contact.LastName}<br/>
+      Owner Email: {! Contact.Owner.Email}
+    </apex:pageBlockSection>
+  </apex:pageBlock>
+</apex:page>
