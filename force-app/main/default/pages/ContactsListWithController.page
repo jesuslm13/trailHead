@@ -9,7 +9,7 @@
   1.0   06-28-2021   sr.Oh   Initial Version
 -->
 <apex:page controller="ContactsListWithController" lightningStylesheets="true">
-  <apex:form>
+  <apex:form >
     <apex:pageBlock title="Contacts List" id="contacts_list">
         <!-- Contacts List -->
       <apex:pageBlockTable value="{! contacts }" var="ct">
