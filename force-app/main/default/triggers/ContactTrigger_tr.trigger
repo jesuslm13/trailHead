@@ -9,7 +9,10 @@
  * 1.0   06-18-2021   ChangeMeIn@UserSettingsUnder.SFDoc   Initial Version
 **/
 trigger ContactTrigger_tr on contact (before insert, before update) {
+
 	Set<Id> setAcctId = new  Set<Id>();
+
+//	이게 자동 deploy가 돼?
 
 	for(Contact objContact : Trigger.new){
 		setAcctId.add(objContact.AccountId);
