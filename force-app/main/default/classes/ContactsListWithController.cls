@@ -9,7 +9,7 @@
  * 1.0   06-28-2021   sr.Oh   Initial Version
 **/
 public class ContactsListWithController {
-
+    // 21.08.19 자동 저장되는지 Test
     private String sortOrder = 'LastName';
 
     public ContactsListWithController() {
