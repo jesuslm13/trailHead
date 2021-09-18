@@ -1,0 +1,25 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 06-18-2021
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+  Modifications Log 
+  Ver   Date         Author                               Modification
+  1.0   06-18-2021   ChangeMeIn@UserSettingsUnder.SFDoc   Initial Version
+-->
+<aura:component implements="lightning:backgroundUtilityItem">
+
+  <!-- EMP API component -->
+  <lightning:empApi aura:id="empApi" />
+
+  <!-- init -->
+  <aura:handler name="init" value="{!this}" action="{!c.fnInit}" />
+
+  <!-- Holds the streaming event subscription -->
+  <aura:attribute name="subscription" type="Map" />
+  <aura:attribute name="channel" type="String" default="/event/Alert__e" />
+  
+
+
+</aura:component>

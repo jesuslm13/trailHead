@@ -1,0 +1,43 @@
+<!--
+  @description       : 
+  @author            : sr.Oh
+  @group             : 
+  @last modified on  : 06-28-2021
+  @last modified by  : sr.Oh
+  Modifications Log 
+  Ver   Date         Author   Modification
+  1.0   06-28-2021   sr.Oh   Initial Version
+-->
+<apex:page controller="ContactsListWithController" lightningStylesheets="true">
+  <apex:form >
+    <apex:pageBlock title="Contacts List" id="contacts_list">
+        <!-- Contacts List -->
+      <apex:pageBlockTable value="{! contacts }" var="ct">
+        
+        <apex:column value="{! ct.FirstName }">
+          <apex:facet name="header">
+            <apex:commandLink action="{! sortByFirstName }" reRender="contacts_list">
+              <apex:outputText value="{! $ObjectType.Contact.Fields.FirstName.Label }" />
+            </apex:commandLink>
+          </apex:facet>
+        </apex:column>
+
+        <apex:column value="{! ct.LastName }">
+          <apex:facet name="header">
+            <apex:commandLink action="{! sortByLastName }" reRender="contacts_list">
+              <apex:outputText value="{! $ObjectType.Contact.Fields.LastName.Label }" />
+            </apex:commandLink>
+          </apex:facet>
+        </apex:column>
+
+        <apex:column value="{! ct.Title }">
+          <!-- <apex:outputText value="{! $ObjectType.Contact.Fields.Title.Label }" /> -->
+        </apex:column>
+        
+        <apex:column value="{! ct.Email }">
+          <!-- <apex:outputText value="{! $ObjectType.Contact.Fields.Email.Label }" /> -->
+        </apex:column>
+      </apex:pageBlockTable>
+    </apex:pageBlock>
+    </apex:form>
+</apex:page>

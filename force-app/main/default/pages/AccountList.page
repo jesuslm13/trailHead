@@ -1,0 +1,24 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 06-18-2021
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+  Modifications Log 
+  Ver   Date         Author                               Modification
+  1.0   05-14-2021   ChangeMeIn@UserSettingsUnder.SFDoc   Initial Version
+-->
+<apex:page standardController="Account" recordSetVar="accounts" lightningStylesheets="true">
+  <apex:form >
+    <apex:pageBlock title="AccountList">
+      <apex:pageBlockSection > 
+        <apex:repeat value="{!accounts}" var="a">
+          <li>
+            <apex:outputLink value="{!URLFOR($Action.Account.View, a.Id)}">View</apex:outputLink>
+            <apex:outputText value="{!a.Id}" />
+          </li>
+        </apex:repeat>
+      </apex:pageBlockSection>
+    </apex:pageBlock>
+  </apex:form>
+</apex:page>

@@ -1,0 +1,22 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 05-14-2021
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+  Modifications Log 
+  Ver   Date         Author                               Modification
+  1.0   05-14-2021   ChangeMeIn@UserSettingsUnder.SFDoc   Initial Version
+-->
+<apex:page standardController="Contact">
+  <apex:form >
+    <apex:pageBlock title="get Contact">
+      <apex:pageBlockSection columns="1">
+        <apex:inputField value="{! Contact.FirstName }" />
+        <apex:inputField value="{! Contact.LastName }" />
+        <apex:inputField value="{! Contact.Email }" />
+        <apex:commandButton action="{! save }" value="save" />
+      </apex:pageBlockSection>
+    </apex:pageBlock>
+  </apex:form>
+</apex:page>
