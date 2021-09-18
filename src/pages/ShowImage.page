@@ -1,0 +1,19 @@
+<!--
+  @description       : 
+  @author            : sr.Oh
+  @group             : 
+  @last modified on  : 06-27-2021
+  @last modified by  : sr.Oh
+  Modifications Log 
+  Ver   Date         Author   Modification
+  1.0   06-27-2021   sr.Oh   Initial Version
+-->
+<apex:page lightningStylesheets="true">
+
+  <apex:includeScript value="{!$Resource.vfimagetest}" />
+
+  <div>
+    <apex:image url="{!URLFOR($Resource.vfimagetest, 'cats/kitten1.jpg')}" width="200" height="200" alt="kitten1.jpg"/>
+  </div>
+
+</apex:page>
